@@ -42,7 +42,7 @@ public class JwtUtil {
      * Generate one with: openssl rand -base64 32
      */
     private SecretKey getSigningKey() {
-        return Keys.hmacShaKeyFor(jwtSecret.getBytes());
+        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     }
 
     // ── Token generation ──────────────────────────────────────────────────────
