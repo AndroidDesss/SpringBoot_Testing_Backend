@@ -24,7 +24,6 @@ import org.springframework.web.bind.annotation.*;
 @SecurityRequirement(name = "bearerAuth")
 public class AdminSeoController {
     private final SeoService service;
-
     @Operation(summary = "Get SEO data by page")
     @GetMapping
     public ResponseEntity<ApiResponse<SeoResponse>> get(@RequestParam Long pageId) {
