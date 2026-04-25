@@ -10,7 +10,6 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.SecureRandom;
 import java.util.Base64;
-
 /**
  * AES-256-GCM encryption for sensitive fields (e.g. mail SMTP passwords).
  * Requires ENCRYPTION_KEY env var: a Base64-encoded 256-bit key.
